@@ -1,0 +1,10 @@
+#wrap {
+    width: 100%;
+}
+.rayout {
+    padding: 180px 50px;
+}
+.icon_24{
+    width: 24px;
+    filter: invert(1);
+}
