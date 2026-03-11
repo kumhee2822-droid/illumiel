@@ -23,8 +23,10 @@
 #wrap {}
 /* ------ 헤더 */
 #wrap header {
-    background-color: black;
-    padding: 30px 50px;
+    padding: 26px 60px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 800;
 }
 #wrap header a {color: #fff;}
 #wrap header .h_first_line {
@@ -33,9 +35,9 @@
     justify-content: space-between;
     align-items: center;
 }
-#wrap header .h_first_line h1 {}
+#wrap header .h_first_line h1 {width: 125px;}
 #wrap header .h_first_line h1 a {}
-#wrap header .h_first_line h1 a img {}
+#wrap header .h_first_line h1 a img {width: 100%;}
 #wrap header .h_first_line .lnb {
     display: flex;
     
@@ -55,28 +57,55 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 }
-#wrap header .h_second_line nav {}
+#wrap header .h_second_line nav {
+    width: 100%;
+    position: relative;
+}
 #wrap header .h_second_line nav .gnb {
     display: flex;
     flex-flow: row nowrap;
-    gap: 20px;
+    gap: 26px;
 }
-#wrap header .h_second_line nav .gnb > li {}
+#wrap header .h_second_line nav .gnb > li {
+    
+}
 #wrap header .h_second_line nav .gnb > li > a {
-    padding: 15px 0;
+    padding: 20px 0;
     display: block;
+    /* border-bottom: 2px solid #16523C; */
 }
 #wrap header .h_second_line nav .gnb .product > a {}
-#wrap header .h_second_line nav .gnb .product .product_depth {}
-#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 {}
+#wrap header .h_second_line nav .gnb .product .product_depth {
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: rgba(255,255,255,0.8);
+    display: none;
+}
+#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 {
+    display: flex; flex-flow: row nowrap;
+    gap: 80px; padding: 40px 0px;
+}
 #wrap header .h_second_line nav .gnb .product .product_depth .depth_02 > li {}
-#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 > li > a {}
-#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 > li > a {}
+#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 > li > a {
+    font-weight: 700;
+    color: #000;
+}
+#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 .all_product {
+    display: flex; flex-flow: column nowrap;
+    gap: 10px;
+}
+#wrap header .h_second_line nav .gnb .product .product_depth .depth_02 .all_product > a {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+}
 #wrap header .h_second_line nav .gnb .product .product_depth .depth_02 li a {}
 #wrap header .h_second_line .lnb_user {
     display: flex; flex-flow: row nowrap;
-    
+    gap: 12px;
 }
 #wrap header .h_second_line .lnb_user > li {}
 #wrap header .h_second_line .lnb_user > li #h_search {
@@ -85,6 +114,97 @@
 }
 #wrap header .h_second_line .lnb_user > li #h_search #search_input {}
 #wrap header .h_second_line .lnb_user > li #h_search #search_btn {}
-#wrap header .h_second_line .lnb_user > li #h_search #search_btn img{
-    filter: invert(1);
+#wrap header .h_second_line .lnb_user > li #h_search #search_btn img{filter: invert(1);}
+#wrap header .h_second_line .lnb_user > li .lnb_cart {position: relative;}
+#wrap header .h_second_line .lnb_user > li .cart_number {font-size: 0.63rem; position: absolute;}
+#wrap main {
+    width: 100%;
 }
+#wrap main #mainbn_slide_wrap{
+    width: 100%; height: 940px;
+    position: relative;
+    overflow: hidden;
+}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container{
+    display: flex; flex-flow: row wrap;
+}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide {}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1{}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1 > .bn_img {}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1 > .bn_img img {}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1 > .slide_txt {}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1 > .slide_txt > span {}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1 > .slide_txt > h1 {}
+#wrap main #mainbn_slide_wrap #mainbn_slide_container .mainbn_slide .mainbn_slide1 > .slide_txt > p {}
+#wrap main #bestseller_wrap {}
+#wrap main #bestseller_wrap .best_title {}
+#wrap main #bestseller_wrap .best_title > p {}
+#wrap main #bestseller_wrap .best_title > h1 {}
+#wrap main #bestseller_wrap .best_title .more {}
+#wrap main #bestseller_wrap .best_slide {width: 100%; margin-top: 40px;}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe {
+    width: calc((434px * 4) + 60px);
+    margin: 0 auto; overflow: hidden;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container {}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list {
+    display: flex; flex-flow: row nowrap; gap: 20px;
+    overflow: hidden; width: max-content;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product{}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum {
+    width: 434px; height: 540px; overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .best_thum_img{
+    width: 100%; overflow: hidden;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .best_thum_img img {
+    height: 100%; transform: translate(-10%, -1%);
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .best_tag {
+    position: absolute;
+    top: 15px; left: 15px;
+    background-color: #fff; border-radius: 5px;
+    color: #16523C; padding: 8px 10px; font-size: 0.88rem;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .icon_box {
+    position: absolute; right: 20px; bottom: 20px;
+    display: flex; flex-flow: row nowrap; gap: 15px;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .best_thum_img .icon_box a{}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .best_thum_img .icon_box .wish{}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_thum .best_thum_img .icon_box .cart{}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title {}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title > h2 {
+    font-size: 1.06rem; font-weight: 500; line-height: 1;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title > h2+p {
+    font-size: 0.94rem; color: rgba(0,0,0,0.6);
+    margin-top: 10px;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title .best_price {
+    border-top: 1px solid rgba(0,0,0,0.2);
+    margin: 20px 0 15px; padding-top: 20px;
+    display: flex; flex-flow: row nowrap;
+    gap: 8px; align-items: center;
+    justify-content: flex-start;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title .best_price .discount {
+    font-size: 1.13rem; font-weight: 700; color: #fff;
+    background-color: #16523C; padding: 5px; border-radius: 3px;
+    display: inline-block;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title .best_price .discount_price {
+    font-size: 1.50rem; font-weight: 700;
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title .best_price .fixed_price {
+    font-size: 1.13rem; color: rgba(0,0,0,0.3);
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title .best_list_rivew {
+}
+#wrap main #bestseller_wrap .best_slide .best_slide_viwe .best_slide_container .best_list .best_product .best_list_title .best_list_rivew span {
+    font-size: 0.88rem; color: rgba(0,0,0,0.6);
+}
+

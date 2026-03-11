@@ -2,9 +2,61 @@
     width: 100%;
 }
 .rayout {
-    padding: 180px 50px;
+    padding: 180px 60px;
 }
 .icon_24{
     width: 24px;
     filter: invert(1);
+}
+/* 슬라이드 배너 */
+.bn_img img {width: 100%;}
+.mainbn_slide {
+    position: relative;
+}
+.slide_txt {
+    position: absolute;
+    top: 50%; left: 60px;
+    transform: translateY(-50%);
+}
+.slide_txt > span {
+    font-size: 1.13rem;
+    color: #fff;
+}
+.slide_txt > h1 {
+    font-size: 3.63rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 30px 0 10px;
+}
+.slide_txt > p {
+    font-size: 1.38rem;
+    color: #fff;
+}
+/* 타이틀 공통 */
+.all_title {position: relative;}
+.all_title > p {
+    font-size: 1.13rem;
+    color: rgba(0,0,0,0.6);
+}
+.all_title > h1 {
+    font-size: 2.75rem; font-weight: 600;
+    margin: 12px 0 0;
+}
+.all_title > a {
+    position: absolute; right: 0; bottom: 0;
+    display: inline-block;
+    border: 1px solid #16523C; border-radius: 50px;
+    padding: 14px 22px;
+    color: #16523C;
+    font-weight: 500;
+}
+.all_title > a img {margin-left: 10px;}
+.progress_bar {
+    background-color: #f6f6f6;
+    height: 4px; width: 60rem;
+}
+.progress_bar span {
+    height: 4px; width: 40%;
+    background-color: #16523C;
+    display: block;
 }
